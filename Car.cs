@@ -1,7 +1,7 @@
 // Car: brand, year of production, color, cost, fuel level;
 using System.Data.Common;
 
-public class Car : IDriveable, IFuelable
+public class Car : IDriveable, IFuelable, IRandomInit
 {
 
     public string Brand { get; set; }
@@ -44,5 +44,10 @@ public class Car : IDriveable, IFuelable
         return $"Brand: {Brand}, YearOfProduction: {YearOfProduction}, Color: {Color}, Cost: {Cost}$, FuelLevel: {FuelLevel}";
     }
 
-
+    public void RandomInit()
+    {
+        Random random = new Random();
+        Brand = random.GetType().
+        throw new NotImplementedException();
+    }
 }
