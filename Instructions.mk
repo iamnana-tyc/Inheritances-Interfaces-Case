@@ -5,7 +5,7 @@ Step 1: Implement class hierarchies + interfaces. Bold is the base class, the ot
 Aircraft: model, year of production, number of crew members, fuel level; 
 Airplane: number of passengers, maximum flight range; 
 Helicopter: number of rotor blades; 
-Fighter: class (by function: front-line, interceptor, deck-based, multifunctional, tactical).
+Fighter: class (type of the fighter: front-line, interceptor, deck-based, multifunctional, tactical).
 
 - Car, passenger car, SUV, truck;
 Car: brand, year of production, color, cost, fuel level, maximum fuel;
@@ -14,7 +14,8 @@ SUV: four-wheel drive (logical field), off-road type;
 Truck: load capacity.
 
 Step 2: Implement two interfaces for Car and Aircraft: IFuelable and IDriveable. 
-- IFuelable has current fuel level attribute and a method MaxFuel. MaxFuel fills fuel to maximum level - max level should be specific to each element in hierarchy - for example filling Helicopter to max fills 2000 liters, whereas filling Truck fills only 100 liters, for example - specify it in each MaxFuel method for elements of your hierarchy).
+- IFuelable has current fuel level attribute and a method MaxFuel. MaxFuel fills fuel to maximum level
+- max level should be specific to each element in hierarchy - for example filling Helicopter to max fills 2000 liters, whereas filling Truck fills only 100 liters, for example - specify it in each MaxFuel method for elements of your hierarchy).
 - IDriveable has attribute: FuelConsumption (shows amount of liters per kilometer - specify it for each machine in your hierarchy) and method: Drive(int kilometers) - this method should drain fuel and use specific FuelConsumption attribute.
 - Override ToString() method for each class (for printing).
 
