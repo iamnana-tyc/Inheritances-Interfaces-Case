@@ -4,17 +4,30 @@ public class Truck : Car
 {
     public int LoadCapacity { get; set; }
 
-    public Truck(string brand, string color, int cost, double fuelLevel, int loadCapacity) : base(brand, color, cost, fuelLevel)
+    public Truck(string brand, string yearOfProduction, string color, int cost, int loadCapacity) : base(brand, yearOfProduction, color, cost)
     {
         this.LoadCapacity = loadCapacity;
     }
+
+    public Truck() { }
+
+    public override void RandomInit()
+    {
+        base.RandomInit();
+
+        Random random = new Random();
+
+        LoadCapacity = random.Next(1000, 20000);
+
+    }
+
     public override void MaxFuel()
     {
-        FuelLevel = 1000;
+        CurrentFuelLevel = 100;
     }
 
     public override string ToString()
     {
-        return base.ToString() + $", Load Capacity: {LoadCapacity}";
+        return base.ToString() + $", Load Capacity: {LoadCapacity} kg";
     }
 }
