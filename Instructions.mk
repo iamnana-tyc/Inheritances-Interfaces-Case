@@ -25,7 +25,11 @@ Step 3: Test your program (without menu)
 - MaxFuel all Cars and all Aircrafts, print the result
 
 Step 4. Prepare to making a user-operated program.
-- Implement an IRandomInit interface for each element in your hierarchy. It should randomly initialize properties of created instance of the class. Interface has the only method RandomInit that returns void. In implementation of this method inside a class it should randomly initialize all properties for this specific class. You may do base.RandomInit() in the methods of children classes, to init props from base class first, then init props specific for your class afterwards. Final method may be used like Car car = new Car(); - firstly we initialize an instance, then call car.RandomInit(); to generate properties.
+- Implement an IRandomInit interface for each element in your hierarchy.
+- It should randomly initialize properties of created instance of the class. 
+- Interface has the only method RandomInit that returns void. In implementation of this method inside a class it should randomly initialize all properties for this specific class. 
+- You may do base.RandomInit() in the methods of children classes, to init props from base class first, then init props specific for your class afterwards.
+- Final method may be used like Car car = new Car(); - firstly we initialize an instance, then call car.RandomInit(); to generate properties.
 - Implement a Machine class. Machine should implement IRandomInit, IFuelable, IDriveable. Make Machine an abstract class and inherit Car and Aircraft from Machine class. 
 
 Step 5. Make a user-operated program:
