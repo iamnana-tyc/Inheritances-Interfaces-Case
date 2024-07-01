@@ -1,26 +1,36 @@
 // Helicopter: number of rotor blades; 
 public class Helicopter : Aircraft
 {
-
-
     public int NumberRoterBladed { get; set; }
-    public double CurrentFuelLevel { get; set; }
 
-    public Helicopter(string model, int yearOfProduction, int numberOfCrewMemembers, int fuelLevel, int numberRoterBladed, double currentFuelLevel)
-    : base(model, yearOfProduction, numberOfCrewMemembers, fuelLevel)
+  public Helicopter(string model, int yearOfProduction, int numberOfCrewMemembers, int numberRoterBladed )
+   : base(model, yearOfProduction, numberOfCrewMemembers)
     {
         this.NumberRoterBladed = numberRoterBladed;
-        this.CurrentFuelLevel = currentFuelLevel;
     }
+
+    public Helicopter(){}
+
 
     public override void MaxFuel()
     {
-        FuelLevel = 2000;
+        CurrentFuelLevel = 2000;
+    }
+
+    public override void RandomInit()
+    {
+        base.RandomInit();
+
+        Random random = new Random();
+
+        NumberRoterBladed = random.Next(2, 4);
+
+        
     }
 
     public override string ToString()
     {
-        return base.ToString() + $", NumberRoterBladed: {NumberRoterBladed}, CurrentFuelLevel: {CurrentFuelLevel} ";
+        return base.ToString() + $", NumberRoterBladed: {NumberRoterBladed} ";
 
     }
 
