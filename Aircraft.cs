@@ -1,40 +1,38 @@
-// Aircraft: model, year of production, number of crew members, fuel level; 
-public class Aircraft : IFuelable, IDriveable
+public class Aircraft : Machine
 {
-    
-
     public string Model { get; set; }
     public int YearOfProduction { get; set; }
-    public int NumberOfCrewMemembers { get; set; }  
-    public int FuelLevel { get; set; }
-    public double CurrentFuelLevel { get ; set ; }
-    public double FuelConsumption { get ; set ; }
+    public int NumberOfCrewMemembers { get; set; }
 
-    public Aircraft(string model, int yearOfProduction, int numberOfCrewMemembers, int fuelLevel)
+    public Aircraft() { }
+
+    public Aircraft(string model, int yearOfProduction, int numberOfCrewMemembers)
     {
         this.Model = model;
         this.YearOfProduction = yearOfProduction;
         this.NumberOfCrewMemembers = numberOfCrewMemembers;
-        this.FuelLevel = fuelLevel;
     }
 
-    public void Drive(int kilometers)
+    public override void RandomInit()
     {
-        double fuelNeeded = kilometers * FuelConsumption;
-        if (fuelNeeded >= FuelConsumption)
-        {
-            fuelNeeded -= FuelConsumption;
-        }
-        Console.WriteLine("You don't have enough fuel to drive");
+        Random random = new Random();
+
+        string[] models = { "Wright Flyer", "Boeing 777 ", "Airbus A380 ", "Boeing 787 Dreamliner", "Lockheed Martin F-35 Lightning II " };
+
+        Model = models[random.Next(models.Length)];
+        YearOfProduction = random.Next(1990, 2024);
+        NumberOfCrewMemembers = random.Next(1, 15);
+
     }
 
-    public virtual void MaxFuel(){
-        FuelLevel = 2000;
+    public override void MaxFuel()
+    {
+        CurrentFuelLevel = 200;
     }
-
     public override string ToString()
     {
-        return base.ToString() + $"Model: {Model}, YearOfProduction:{YearOfProduction}, NumberOfCrewMemembers:{NumberOfCrewMemembers},FuelLevel:{FuelLevel} ";
+        return base.ToString() + $"Model: {Model}, YearOfProduction:{YearOfProduction}, NumberOfCrewMemembers:{NumberOfCrewMemembers}";
     }
+
 
 }
