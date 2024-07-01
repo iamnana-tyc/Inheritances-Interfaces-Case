@@ -4,27 +4,34 @@ public class PassengerCar : Car
 
     public int MaximumSpeed { get; set; }
 
-    public PassengerCar(
-        string brand,
-        string color,
-        int cost,
-        double fuelLevel,
-        int numberOfSeat,
-        int maximumSpeed
-    )
-        : base(brand, color, cost, fuelLevel)
+    public PassengerCar() { }
+
+    public PassengerCar(string brand, string yearOfProduction, string color, int cost, int numberOfSeat, int maximumSpeed)
+    : base(brand, yearOfProduction, color, cost)
     {
         this.NumberOfSeat = numberOfSeat;
         this.MaximumSpeed = maximumSpeed;
     }
 
+    public override void RandomInit()
+    {
+        base.RandomInit();
+
+        Random random = new Random();
+
+        NumberOfSeat = random.Next(2, 5);
+        MaximumSpeed = random.Next(100, 250);
+    }
+
     public override void MaxFuel()
     {
-        FuelLevel = 1000;
+        CurrentFuelLevel = 500;
     }
 
     public override string ToString()
     {
         return base.ToString() + $", Seat: {NumberOfSeat}, Max speed: {MaximumSpeed} km/hour ";
     }
+
 }
+
