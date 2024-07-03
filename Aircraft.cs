@@ -27,11 +27,11 @@ public class Aircraft : Machine
 
     public override void MaxFuel()
     {
-        CurrentFuelLevel = 200;
+        CurrentFuelLevel = 4000;
     }
     public override string ToString()
     {
-        return base.ToString() + $"Model: {Model}, YearOfProduction:{YearOfProduction}, NumberOfCrewMemembers:{NumberOfCrewMemembers}";
+        return base.ToString() + $"Model: {Model}, YearOfProduction:{YearOfProduction}, NumberOfCrewMemembers:{NumberOfCrewMemembers}, FuelLevel:{CurrentFuelLevel}";
     }
 
 
