@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nana/Documents/Git proj/Task02/Inheritances-Interfaces-Case/Inheritances-Interfaces-Case.csproj": {}
+    "/Users/nana/Documents/Git proj/task2/Inheritances-Interfaces-Case/Inheritances-Interfaces-Case.csproj": {}
   },
   "projects": {
-    "/Users/nana/Documents/Git proj/Task02/Inheritances-Interfaces-Case/Inheritances-Interfaces-Case.csproj": {
+    "/Users/nana/Documents/Git proj/task2/Inheritances-Interfaces-Case/Inheritances-Interfaces-Case.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nana/Documents/Git proj/Task02/Inheritances-Interfaces-Case/Inheritances-Interfaces-Case.csproj",
+        "projectUniqueName": "/Users/nana/Documents/Git proj/task2/Inheritances-Interfaces-Case/Inheritances-Interfaces-Case.csproj",
         "projectName": "Inheritances-Interfaces-Case",
-        "projectPath": "/Users/nana/Documents/Git proj/Task02/Inheritances-Interfaces-Case/Inheritances-Interfaces-Case.csproj",
+        "projectPath": "/Users/nana/Documents/Git proj/task2/Inheritances-Interfaces-Case/Inheritances-Interfaces-Case.csproj",
         "packagesPath": "/Users/nana/.nuget/packages/",
-        "outputPath": "/Users/nana/Documents/Git proj/Task02/Inheritances-Interfaces-Case/obj/",
+        "outputPath": "/Users/nana/Documents/Git proj/task2/Inheritances-Interfaces-Case/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nana/.nuget/NuGet/NuGet.Config"
