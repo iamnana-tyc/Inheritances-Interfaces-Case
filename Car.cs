@@ -49,6 +49,6 @@ public class Car : Machine
 
     public override string ToString()
     {
-        return $"Brand: {Brand}, YearOfProduction: {YearOfProduction}, Color: {Color}, Cost: {Cost}$ ";
+        return $"Brand: {Brand}, YearOfProduction: {YearOfProduction}, Color: {Color}, Cost: {Cost}$, FuelLevel: {CurrentFuelLevel}  ";
     }
 }
